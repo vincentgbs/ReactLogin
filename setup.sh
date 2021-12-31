@@ -121,3 +121,15 @@ app.use('/login', (req, res) => {
 
 app.listen(8080, () => console.log('API is running on http://localhost:8080/login'));" > server.js
 # node server.js
+
+echo "import { useState } from 'react';
+
+export default function useToken() {
+  const getToken = () => {
+    const tokenString = sessionStorage.getItem('token');
+    const userToken = JSON.parse(tokenString);
+    return userToken?.token
+  };
+  const [token, setToken] = useState(getToken());
+
+}" > src/components/App/useToken.js
