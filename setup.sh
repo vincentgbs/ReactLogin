@@ -13,7 +13,7 @@ sudo n stable
 
 ## https://www.digitalocean.com/community/tutorials/how-to-manage-state-on-react-class-components#step-1-—-creating-an-empty-project
 npx create-react-app auth-tutorial ## requires user intervention -y
-cd auth-tutorial
+cd auth-tutorial ## cd /vagrant/auth-tutorial/
 mkdir src/components
 mkdir src/components/App
 mv src/App.* src/components/App
@@ -22,23 +22,23 @@ sed -i "s#import App from './App';#import App from './components/App/App';#g" sr
 # npm start ## to preview
 ## preview at: 192.168.33.50:3000
 
-# ## https://www.digitalocean.com/community/tutorials/how-to-add-login-authentication-to-react-applications
-# npm install react-router-dom
-# mkdir src/components/Dashboard
-# mkdir src/components/Preferences
-#
-# echo "import React from 'react';
-#
-# export default function Dashboard() {
-#   return(
-#     <h2>Dashboard</h2>
-#   );
-# }" > src/components/Dashboard/Dashboard.js
-#
-# echo "import React from 'react';
-#
-# export default function Preferences() {
-#   return(
-#     <h2>Preferences</h2>
-#   );
-# }" > src/components/Preferences/Preferences.js
+## https://www.digitalocean.com/community/tutorials/how-to-add-login-authentication-to-react-applications
+npm install react-router-dom
+mkdir src/components/Dashboard
+mkdir src/components/Preferences
+
+echo "import React from 'react';
+
+export default function Dashboard() {
+  return(
+    <h2>Dashboard</h2>
+  );
+}" > src/components/Dashboard/Dashboard.js
+
+echo "import React from 'react';
+
+export default function Preferences() {
+  return(
+    <h2>Preferences</h2>
+  );
+}" > src/components/Preferences/Preferences.js
