@@ -13,7 +13,7 @@ sudo n stable
 
 ## https://www.digitalocean.com/community/tutorials/how-to-manage-state-on-react-class-components#step-1-—-creating-an-empty-project
 npx create-react-app auth-tutorial -y
-cd auth-tutorial ## cd /vagrant/auth-tutorial/
+cd /vagrant/auth-tutorial/
 mkdir src/components
 mkdir src/components/App
 mv src/App.* src/components/App
@@ -24,6 +24,7 @@ sed -i "s#import logo from './logo.svg';#import logo from '../../logo.svg';#g" s
 ## preview at: 192.168.33.50:3000
 
 ## https://www.digitalocean.com/community/tutorials/how-to-add-login-authentication-to-react-applications
+cd /vagrant/auth-tutorial/
 npm install react-router-dom
 mkdir src/components/Dashboard
 mkdir src/components/Preferences
