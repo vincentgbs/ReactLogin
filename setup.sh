@@ -105,3 +105,19 @@ echo ".login-wrapper {
     flex-direction: column;
     align-items: center;
 }" > src/components/Login/Login.css
+
+npm install --save-dev express cors
+echo "const express = require('express');
+const cors = require('cors')
+const app = express();
+
+app.use(cors());
+
+app.use('/login', (req, res) => {
+  res.send({
+    token: 'test123'
+  });
+});
+
+app.listen(8080, () => console.log('API is running on http://localhost:8080/login'));" > server.js
+# node server.js
