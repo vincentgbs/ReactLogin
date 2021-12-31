@@ -8,8 +8,14 @@ export default function useToken() {
         } else { // less strict
             tokenString = localStorage.getItem('token');
         }
-        const userToken = JSON.parse(tokenString);
-        return userToken?.token
+        let userToken;
+        try {
+            userToken = JSON.parse(tokenString);
+        } catch(e) {
+            console.debug(e);
+            alert("Token error");
+        }
+        return userToken?.token;
     };
     const [token, setToken] = useState(getToken());
 
