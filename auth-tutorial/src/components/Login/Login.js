@@ -5,7 +5,7 @@ import './Login.css';
 import Button from 'react-bootstrap/Button';
 
 async function loginUser(credentials) {
-    return fetch('http://192.168.33.50:8080/login', {
+    return fetch(process.env.REACT_APP_LOGIN_URL, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
