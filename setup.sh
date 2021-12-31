@@ -11,7 +11,7 @@ sudo apt install npm -y
 sudo npm install -g n ## update node
 sudo n stable
 
-## https://www.digitalocean.com/community/tutorials/how-to-manage-state-on-react-class-components#step-1-—-creating-an-empty-project
+## https://www.digitalocean.com/community/tutorials/how-to-manage-state-on-react-class-components
 npx create-react-app auth-tutorial -y
 cd /vagrant/auth-tutorial/
 mkdir src/components
