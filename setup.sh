@@ -48,7 +48,7 @@ export default function Preferences() {
 # in react-router-dom v6, "Switch" is replaced by routes "Routes"
 echo "import React from 'react';
 import './App.css';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Dashboard from '../Dashboard/Dashboard';
 import Preferences from '../Preferences/Preferences';
 
@@ -57,17 +57,19 @@ function App() {
     <div className=\"wrapper\">
       <h1>Application</h1>
       <BrowserRouter>
-        <Switch>
-          <Route path=\"/dashboard\">
-            <Dashboard />
-          </Route>
-          <Route path=\"/preferences\">
-            <Preferences />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route path=\"/dashboard\" element={<Dashboard />} />
+          <Route path=\"/preferences\" element={<Preferences />} />
+        </Routes>
       </BrowserRouter>
     </div>
   );
 }
 
 export default App;" > src/components/App/App.js
+
+echo "
+
+.wrapper {
+    padding: 20px;
+}" >> src/components/App/App.css
