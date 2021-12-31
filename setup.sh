@@ -12,13 +12,14 @@ sudo npm install -g n ## update node
 sudo n stable
 
 ## https://www.digitalocean.com/community/tutorials/how-to-manage-state-on-react-class-components#step-1-—-creating-an-empty-project
-npx create-react-app auth-tutorial ## requires user intervention -y
+npx create-react-app auth-tutorial -y
 cd auth-tutorial ## cd /vagrant/auth-tutorial/
 mkdir src/components
 mkdir src/components/App
 mv src/App.* src/components/App
 # cp src/index.js src/index.js.bak
 sed -i "s#import App from './App';#import App from './components/App/App';#g" src/index.js
+sed -i "s#import logo from './logo.svg';#import logo from '../../logo.svg';#g" src/components/App/App.js
 # npm start ## to preview
 ## preview at: 192.168.33.50:3000
 
