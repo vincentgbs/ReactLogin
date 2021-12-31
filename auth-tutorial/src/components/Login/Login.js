@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './Login.css';
 
+import Button from 'react-bootstrap/Button';
+
 async function loginUser(credentials) {
     return fetch('http://192.168.33.50:8080/login', {
         method: 'POST',
@@ -39,7 +41,7 @@ export default function Login({ setToken }) {
                     <input type="password" onChange={e => setPassword(e.target.value)}/>
                 </label>
                 <div>
-                    <button type="submit">Submit</button>
+                    <Button variant="primary" type="submit">Submit</Button>
                 </div>
             </form>
         </div>
