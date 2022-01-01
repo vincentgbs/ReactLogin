@@ -17,5 +17,6 @@ npm install react-router-dom
 npm install react-bootstrap bootstrap@5.1.3
 npm install bootstrap
 npm install axios
+npm install react-validation validator
 
 # npm start ## preview at: 192.168.33.50:3000
