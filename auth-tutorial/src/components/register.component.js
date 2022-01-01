@@ -27,7 +27,7 @@ const email = value => {
 };
 
 const vusername = value => {
-  if (value.length < 3 || value.length > 20) {
+  if (value.length < process.env.REACT_APP_MIN_USERNAME || value.length > process.env.REACT_APP_MAX_USERNAME) {
     return (
       <div className="alert alert-danger" role="alert">
         The username must be between 3 and 20 characters.
